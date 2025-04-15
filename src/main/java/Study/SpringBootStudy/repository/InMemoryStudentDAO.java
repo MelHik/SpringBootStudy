@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
 public class InMemoryStudentDAO {
     private final List<Student> STUDENTS = new ArrayList<>();
 
-    public List<Student> findAllStudent(){
+    public List<Student> findAllStudent() {
         return STUDENTS;
     }
 

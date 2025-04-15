@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgres://213.5.111.52:54321/SpringStudy
+    url: jdbc:postgresql://213.5.111.52:54321/SpringStudy
     username: postgres
     password: 15948Post
     driver-class-name: org.postgresql.Driver

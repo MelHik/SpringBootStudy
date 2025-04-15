@@ -15,8 +15,7 @@ public class Student {
     private String firstName;
     private String lastName;
     private String middleName;
-    private LocalDate birthday;
-    @NonNull
+    private LocalDate dateOfBirth;
     @Column(unique = true)
     private String email;
     @Transient

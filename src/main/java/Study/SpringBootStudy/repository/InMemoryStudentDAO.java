@@ -1,11 +1,13 @@
 package Study.SpringBootStudy.repository;
 
 import Study.SpringBootStudy.model.Student;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 
+@Repository
 public class InMemoryStudentDAO {
     private final List<Student> STUDENTS = new ArrayList<>();
 
@@ -23,7 +25,7 @@ public class InMemoryStudentDAO {
                 .findFirst()
                 .orElse(null);
     }
-    public Student update(Student student) {
+    public Student updateStudent(Student student) {
         var studentIndex = IntStream.range(0, STUDENTS.size())
                 .filter(index -> STUDENTS.get(index).getEmail().equals(student))
                 .findFirst()

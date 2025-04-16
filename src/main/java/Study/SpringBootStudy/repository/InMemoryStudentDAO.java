@@ -19,12 +19,14 @@ public class InMemoryStudentDAO {
         STUDENTS.add(student);
         return student;
     }
+
     public Student findByEmail(String email) {
         return STUDENTS.stream()
                 .filter(element -> element.getEmail().equals(email))
                 .findFirst()
                 .orElse(null);
     }
+
     public Student updateStudent(Student student) {
         var studentIndex = IntStream.range(0, STUDENTS.size())
                 .filter(index -> STUDENTS.get(index).getEmail().equals(student))
